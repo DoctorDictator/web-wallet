@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { MnemonicsContext } from "./wrapper";
 
 export default function Generate() {
-  const { mnemonic, createMnemonics } = useContext(MnemonicsContext);
+  const context = useContext(MnemonicsContext);
+  const mnemonic = context?.mnemonic;
+  const createMnemonics = context?.createMnemonics;
 
   return (
     <>
